@@ -8,45 +8,47 @@
 	<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/skeleton/skeleton.css">
+	<link rel="stylesheet" href="css/oracle.css">
 	<!--link rel="icon" type="image/png" href="images/favicon.png"-->
 </head>
 <body>
-	<h1>card Oracle</h1>
-	<form>
-		<div class="row">
-			<div class="ten columns">
+	<div class="container">
+		<h1>card Oracle</h1>
+		<form>
+			<div class="row">
 				<label for="searchQuery">your query for the oracle</label>
 				<input class="u-full-width" type="text" placeholder="name a card..." id="searchQuery">
 			</div>
-			<div class="two columns">
+			<div class="row">
+				<div class="six columns">
+					<label class="401games">
+						<input type="checkbox">
+						<span class="label-body">401 games</span>
+					</label>
+					<label class="facetoface">
+						<input type="checkbox">
+						<span class="label-body">face to face</span>
+					</label>
+					<label class="tcgplayer">
+						<input type="checkbox">
+						<span class="label-body">tcg player</span>
+					</label>
+				</div>
+				<div class="six columns">
+					<label class="chimera">
+						<input type="checkbox">
+						<span class="label-body">chimera</span>
+					</label>
+					<label class="jj">
+						<input type="checkbox">
+						<span class="label-body">j&j</span>
+					</label>
+				</div>
+			</div>
+			<div class="row">
 				<input class="button-primary u-full-width" type="submit" value="Search">
 			</div>
-		</div>
-		<div class="row">
-			<div class="six columns">
-				<label class="401games">
-					<input type="checkbox">
-					<span class="label-body">401 games</span>
-				</label>
-				<label class="facetoface">
-					<input type="checkbox">
-					<span class="label-body">face to face</span>
-				</label>
-				<label class="tcgplayer">
-					<input type="checkbox">
-					<span class="label-body">tcg player</span>
-				</label>
-			</div>
-			<div class="six columns">
-				<label class="chimera">
-					<input type="checkbox">
-					<span class="label-body">chimera</span>
-				</label>
-				<label class="jj">
-					<input type="checkbox">
-					<span class="label-body">j&j</span>
-				</label>
-			</div>
-		</div>
+		</form>
+	</div>
 </body>
 </html>
