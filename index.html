@@ -10,38 +10,105 @@
 	<link rel="stylesheet" href="css/skeleton/skeleton.css">
 	<link rel="stylesheet" href="css/oracle.css">
 	<!--link rel="icon" type="image/png" href="images/favicon.png"-->
+
+	<script type="text/javascript">
+	function performSearch() {
+		var searchTerm = 
+			encodeURIComponent(document.getElementById('searchQuery').value);
+
+		var faceFlag = 
+			document.getElementById('facetoface').checked;
+		var fourOhOneFlag = 
+			document.getElementById('401games').checked;
+		var tcgpFlag = 
+			document.getElementById('tcgplayer').checked;
+		var chimeraFlag = 
+			document.getElementById('chimera').checked;
+		var jjFlag = 
+			document.getElementById('jj').checked;
+		var ebayFlag = 
+			document.getElementById('ebay').checked;
+
+		if (tcgpFlag) {
+			window.open(
+				'https://www.tcgplayer.com/search/all/product?q=' + searchTerm + '&view=grid', 
+				'tcgpWindow'
+			);
+		}
+		
+		if (faceFlag) {
+			window.open(
+				'https://www.facetofacegames.com/search/?keyword=' + searchTerm, 
+				'faceWindow'
+			);
+		}
+
+		if (fourOhOneFlag) {
+			window.open(
+				'https://store.401games.ca/pages/search-results?q=' + searchTerm, 
+				'fourOhOneWindow'
+			);
+		}
+
+		if (chimeraFlag) {
+			window.open(
+				'https://chimeragamingonline.com/search?type=product&options%5Bprefix%5D=last&q=' + searchTerm, 
+				'chimeraWindow'
+			);
+		}
+
+		if (jjFlag) {
+			window.open(
+				'https://jjcards.crystalcommerce.com/products/search?q=' + searchTerm, 
+				'jjWindow'
+			);
+		}
+
+		if (ebayFlag) {
+			window.open(
+				'https://www.ebay.ca/sch/i.html?_from=R40&_nkw=' + searchTerm + '&_sacat=0&rt=nc&LH_Sold=1&LH_Complete=1', 
+				'ebayWindow'
+			);
+		}
+	}
+
+	</script>
 </head>
 <body>
 	<div class="container">
 		<h1>card Oracle</h1>
-		<form>
+		<form onsubmit="performSearch(); return false;">
 			<div class="row">
 				<label for="searchQuery">your query for the oracle</label>
 				<input class="u-full-width" type="text" placeholder="name a card..." id="searchQuery">
 			</div>
 			<div class="row">
 				<div class="six columns">
-					<label class="401games">
-						<input type="checkbox">
+					<label class="option">
+						<input type="checkbox" id="401games">
 						<span class="label-body">401 games</span>
 					</label>
-					<label class="facetoface">
-						<input type="checkbox">
+					<label class="option">
+						<input type="checkbox" id="facetoface" checked>
 						<span class="label-body">face to face</span>
 					</label>
-					<label class="tcgplayer">
-						<input type="checkbox">
+					<label class="option">
+						<input type="checkbox" id="tcgplayer" checked>
 						<span class="label-body">tcg player</span>
 					</label>
 				</div>
 				<div class="six columns">
-					<label class="chimera">
-						<input type="checkbox">
+					<label class="option">
+						<input type="checkbox" id="chimera">
 						<span class="label-body">chimera</span>
 					</label>
-					<label class="jj">
-						<input type="checkbox">
+					<label class="option">
+						<input type="checkbox" id="jj">
 						<span class="label-body">j&j</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="ebay">
+						<span class="label-body">ebay</span>
 					</label>
 				</div>
 			</div>
