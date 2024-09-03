@@ -34,6 +34,10 @@
 			document.getElementById('atlas').checked;
 		var pcFlag = 
 			document.getElementById('pc').checked;
+		var limitlessFlag = 
+			document.getElementById('limitless').checked;
+		var scryfallFlag = 
+			document.getElementById('scryfall').checked;
 
 		if (tcgpFlag) {
 			window.open(
@@ -97,6 +101,20 @@
 				'pcWindow'
 			);
 		}
+
+		if (limitlessFlag) {
+			window.open(
+				'https://limitlesstcg.com/cards?q=' + searchTerm, 
+				'limitlessWindow'
+			);
+		}
+
+		if (scryfallFlag) {
+			window.open(
+				'https://scryfall.com/search?q=' + searchTerm, 
+				'scryfallWindow'
+			);
+		}
 	}
 	</script>
 </head>
@@ -130,6 +148,10 @@
 						<input type="checkbox" id="pc">
 						<span class="label-body">price charting</span>
 					</label>
+					<label class="option">
+						<input type="checkbox" id="scryfall">
+						<span class="label-body">scryfall</span>
+					</label>
 				</div>
 				<div class="six columns">
 					<label class="option">
@@ -147,6 +169,10 @@
 					<label class="option">
 						<input type="checkbox" id="atlas">
 						<span class="label-body">atlas collectables</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="limitless">
+						<span class="label-body">limitless tcg</span>
 					</label>
 				</div>
 			</div>
