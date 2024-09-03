@@ -32,6 +32,8 @@
 			document.getElementById('scg').checked;
 		var atlasFlag = 
 			document.getElementById('atlas').checked;
+		var pcFlag = 
+			document.getElementById('pc').checked;
 
 		if (tcgpFlag) {
 			window.open(
@@ -88,9 +90,14 @@
 				'atlasWindow'
 			);
 		}
+
+		if (pcFlag) {
+			window.open(
+				'https://www.pricecharting.com/search-products?q=' + searchTerm + '&type=prices', 
+				'pcWindow'
+			);
+		}
 	}
-
-
 	</script>
 </head>
 <body>
@@ -118,6 +125,10 @@
 					<label class="option">
 						<input type="checkbox" id="scg">
 						<span class="label-body">star city games</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="pc">
+						<span class="label-body">price charting</span>
 					</label>
 				</div>
 				<div class="six columns">
