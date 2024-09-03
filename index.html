@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/skeleton/skeleton.css">
 	<link rel="stylesheet" href="css/oracle.css">
 	<!--link rel="icon" type="image/png" href="images/favicon.png"-->
-
+	
 	<script type="text/javascript">
 	function performSearch() {
 		var searchTerm = 
@@ -28,6 +28,8 @@
 			document.getElementById('jj').checked;
 		var ebayFlag = 
 			document.getElementById('ebay').checked;
+		var scgFlag = 
+			document.getElementById('scg').checked;
 
 		if (tcgpFlag) {
 			window.open(
@@ -35,7 +37,7 @@
 				'tcgpWindow'
 			);
 		}
-		
+
 		if (faceFlag) {
 			window.open(
 				'https://www.facetofacegames.com/search/?keyword=' + searchTerm, 
@@ -70,6 +72,13 @@
 				'ebayWindow'
 			);
 		}
+
+		if (scgFlag) {
+			window.open(
+				'https://starcitygames.com/search/?search_query=' + searchTerm + '&sort=score', 
+				'scgWindow'
+			);
+		}
 	}
 
 	</script>
@@ -95,6 +104,10 @@
 					<label class="option">
 						<input type="checkbox" id="tcgplayer" checked>
 						<span class="label-body">tcg player</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="scg">
+						<span class="label-body">star city games</span>
 					</label>
 				</div>
 				<div class="six columns">
