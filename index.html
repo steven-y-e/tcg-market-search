@@ -38,6 +38,14 @@
 			document.getElementById('limitless').checked;
 		var scryfallFlag = 
 			document.getElementById('scryfall').checked;
+		var xjFlag = 
+			document.getElementById('xj').checked;
+		var psgFlag = 
+			document.getElementById('psg').checked;
+		var i808Flag = 
+			document.getElementById('i808').checked;
+		var fiftycFlag = 
+			document.getElementById('fiftyc').checked;
 
 		if (tcgpFlag) {
 			window.open(
@@ -115,6 +123,34 @@
 				'scryfallWindow'
 			);
 		}
+
+		if (xjFlag) {
+			window.open(
+				'https://www.expeditionjeux.com/products/search?q=' + searchTerm + '&c=1', 
+				'xjWindow'
+			);
+		}
+
+		if (psgFlag) {
+			window.open(
+				'https://www.perfectspheregames.com/search?type=product&q=' + searchTerm, 
+				'psgWindow'
+			);
+		}
+
+		if (i808Flag) {
+			window.open(
+				'https://www.ideal808.com/SearchResults?search=' + searchTerm, 
+				'i808Window'
+			);
+		}
+
+		if (fiftycFlag) {
+			window.open(
+				'https://50cards.shop/pages/search-results-page?q=' + searchTerm, 
+				'fiftycFlag'
+			);
+		}
 	}
 	</script>
 </head>
@@ -152,6 +188,14 @@
 						<input type="checkbox" id="scryfall">
 						<span class="label-body">scryfall</span>
 					</label>
+					<label class="option">
+						<input type="checkbox" id="xj">
+						<span class="label-body">expedition jeux</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="psg">
+						<span class="label-body">perfect sphere</span>
+					</label>
 				</div>
 				<div class="six columns">
 					<label class="option">
@@ -173,6 +217,14 @@
 					<label class="option">
 						<input type="checkbox" id="limitless">
 						<span class="label-body">limitless tcg</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="i808">
+						<span class="label-body">ideal808</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="fiftyc">
+						<span class="label-body">50cards</span>
 					</label>
 				</div>
 			</div>
