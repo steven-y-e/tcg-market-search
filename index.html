@@ -46,6 +46,8 @@
 			document.getElementById('i808').checked;
 		var fiftycFlag = 
 			document.getElementById('fiftyc').checked;
+		var tcgrFlag = 
+			document.getElementById('tcgr').checked;
 
 		if (tcgpFlag) {
 			window.open(
@@ -148,7 +150,14 @@
 		if (fiftycFlag) {
 			window.open(
 				'https://50cards.shop/pages/search-results-page?q=' + searchTerm, 
-				'fiftycFlag'
+				'fiftycWindow'
+			);
+		}
+
+		if (tcgrFlag) {
+			window.open(
+				'https://tcgrepublic.com/product/text_search.html?q=' + searchTerm, 
+				'tcgrWindow'
 			);
 		}
 	}
@@ -204,7 +213,7 @@
 					</label>
 					<label class="option">
 						<input type="checkbox" id="jj">
-						<span class="label-body">j&j</span>
+						<span class="label-body">j&j cards and collectables</span>
 					</label>
 					<label class="option">
 						<input type="checkbox" id="ebay">
@@ -225,6 +234,10 @@
 					<label class="option">
 						<input type="checkbox" id="fiftyc">
 						<span class="label-body">50cards</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="tcgr">
+						<span class="label-body">tcg republic</span>
 					</label>
 				</div>
 			</div>
