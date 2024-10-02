@@ -127,6 +127,13 @@
 				'tcgrWindow'
 			);
 		}
+
+		if (document.getElementById('ccac').checked) {
+            window.open(
+                'https://atlascollectables-admin.crystalcommerce.com/inventory/update?utf8=%E2%9C%93&form_action=&page=1&per_page_number=200&in_category_tree_by_id=&search=' + searchTerm + '&commit=Go', 
+                'ccacWindow'
+            );
+        }
 	}
 	</script>
 </head>
@@ -171,6 +178,10 @@
 					<label class="option">
 						<input type="checkbox" id="scg">
 						<span class="label-body">star city games</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="ccac">
+						<span class="label-body">crystal commerce (atlas)</span>
 					</label>
 				</div>
 				<div class="six columns">
