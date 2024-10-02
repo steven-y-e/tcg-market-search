@@ -16,145 +16,112 @@
 		var searchTerm = 
 			encodeURIComponent(document.getElementById('searchQuery').value);
 
-		var faceFlag = 
-			document.getElementById('facetoface').checked;
-		var fourOhOneFlag = 
-			document.getElementById('401games').checked;
-		var tcgpFlag = 
-			document.getElementById('tcgplayer').checked;
-		var chimeraFlag = 
-			document.getElementById('chimera').checked;
-		var jjFlag = 
-			document.getElementById('jj').checked;
-		var ebayFlag = 
-			document.getElementById('ebay').checked;
-		var scgFlag = 
-			document.getElementById('scg').checked;
-		var atlasFlag = 
-			document.getElementById('atlas').checked;
-		var pcFlag = 
-			document.getElementById('pc').checked;
-		var limitlessFlag = 
-			document.getElementById('limitless').checked;
-		var scryfallFlag = 
-			document.getElementById('scryfall').checked;
-		var xjFlag = 
-			document.getElementById('xj').checked;
-		var psgFlag = 
-			document.getElementById('psg').checked;
-		var i808Flag = 
-			document.getElementById('i808').checked;
-		var fiftycFlag = 
-			document.getElementById('fiftyc').checked;
-		var tcgrFlag = 
-			document.getElementById('tcgr').checked;
-
-		if (tcgpFlag) {
+		if (document.getElementById('tcgplayer').checked) {
 			window.open(
 				'https://www.tcgplayer.com/search/all/product?q=' + searchTerm + '&view=grid', 
 				'tcgpWindow'
 			);
 		}
 
-		if (faceFlag) {
+		if (document.getElementById('facetoface').checked) {
 			window.open(
 				'https://www.facetofacegames.com/search/?keyword=' + searchTerm, 
 				'faceWindow'
 			);
 		}
 
-		if (fourOhOneFlag) {
+		if (document.getElementById('401games').checked) {
 			window.open(
 				'https://store.401games.ca/pages/search-results?q=' + searchTerm, 
 				'fourOhOneWindow'
 			);
 		}
 
-		if (chimeraFlag) {
+		if (document.getElementById('chimera').checked) {
 			window.open(
 				'https://chimeragamingonline.com/search?type=product&options%5Bprefix%5D=last&q=' + searchTerm, 
 				'chimeraWindow'
 			);
 		}
 
-		if (jjFlag) {
+		if (document.getElementById('jj').checked) {
 			window.open(
 				'https://jjcards.crystalcommerce.com/products/search?q=' + searchTerm, 
 				'jjWindow'
 			);
 		}
 
-		if (ebayFlag) {
+		if (document.getElementById('ebay').checked) {
 			window.open(
 				'https://www.ebay.ca/sch/i.html?_from=R40&_nkw=' + searchTerm + '&_sacat=0&rt=nc&LH_Sold=1&LH_Complete=1', 
 				'ebayWindow'
 			);
 		}
 
-		if (scgFlag) {
+		if (document.getElementById('scg').checked) {
 			window.open(
 				'https://starcitygames.com/search/?search_query=' + searchTerm + '&sort=score', 
 				'scgWindow'
 			);
 		}
 
-		if (atlasFlag) {
+		if (document.getElementById('atlas').checked) {
 			window.open(
 				'https://www.atlascollectables.com/products/search?q=' + searchTerm, 
 				'atlasWindow'
 			);
 		}
 
-		if (pcFlag) {
+		if (document.getElementById('pc').checked) {
 			window.open(
 				'https://www.pricecharting.com/search-products?q=' + searchTerm + '&type=prices', 
 				'pcWindow'
 			);
 		}
 
-		if (limitlessFlag) {
+		if (document.getElementById('limitless').checked) {
 			window.open(
 				'https://limitlesstcg.com/cards?q=' + searchTerm, 
 				'limitlessWindow'
 			);
 		}
 
-		if (scryfallFlag) {
+		if (document.getElementById('scryfall').checked) {
 			window.open(
 				'https://scryfall.com/search?q=' + searchTerm, 
 				'scryfallWindow'
 			);
 		}
 
-		if (xjFlag) {
+		if (document.getElementById('xj').checked) {
 			window.open(
 				'https://www.expeditionjeux.com/products/search?q=' + searchTerm + '&c=1', 
 				'xjWindow'
 			);
 		}
 
-		if (psgFlag) {
+		if (document.getElementById('psg').checked) {
 			window.open(
 				'https://www.perfectspheregames.com/search?type=product&q=' + searchTerm, 
 				'psgWindow'
 			);
 		}
 
-		if (i808Flag) {
+		if (document.getElementById('i808').checked) {
 			window.open(
 				'https://www.ideal808.com/SearchResults?search=' + searchTerm, 
 				'i808Window'
 			);
 		}
 
-		if (fiftycFlag) {
+		if (document.getElementById('fiftyc').checked) {
 			window.open(
 				'https://50cards.shop/pages/search-results-page?q=' + searchTerm, 
 				'fiftycWindow'
 			);
 		}
 
-		if (tcgrFlag) {
+		if (document.getElementById('tcgr').checked) {
 			window.open(
 				'https://tcgrepublic.com/product/text_search.html?q=' + searchTerm, 
 				'tcgrWindow'
