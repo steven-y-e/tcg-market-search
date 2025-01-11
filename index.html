@@ -135,6 +135,13 @@
 			);
 		}
 
+		if (document.getElementById('skyfox').checked) {
+			window.open(
+				'https://skyfoxgames.com/search?type=product&options%5Bprefix%5D=last&q=' + searchTerm, 
+				'skyfoxWindow'
+			);
+		}
+
 		if (document.getElementById('kanzen').checked) {
 			window.open(
 				'https://kanzengames.com/search?q=' + searchTerm, 
@@ -234,6 +241,10 @@
 					<label class="option">
 						<input type="checkbox" id="darkfox">
 						<span class="label-body">darkfox tcg</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="skyfox">
+						<span class="label-body">skyfox games</span>
 					</label>
 					<label class="option">
 						<input type="checkbox" id="fiftyc">
