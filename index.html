@@ -135,6 +135,13 @@
 			);
 		}
 
+		if (document.getElementById('kanzen').checked) {
+			window.open(
+				'https://kanzengames.com/search?q=' + searchTerm, 
+				'kanzenWindow'
+			);
+		}
+
 		if (document.getElementById('ccac').checked) {
             window.open(
                 'https://atlascollectables-admin.crystalcommerce.com/inventory/update?utf8=%E2%9C%93&form_action=&page=1&per_page_number=200&in_category_tree_by_id=&search=' + searchTerm + '&commit=Go', 
@@ -185,6 +192,10 @@
 					<label class="option">
 						<input type="checkbox" id="scg">
 						<span class="label-body">star city games</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="kanzen">
+						<span class="label-body">kanzen games</span>
 					</label>
 					<label class="option">
 						<input type="checkbox" id="ccac">
