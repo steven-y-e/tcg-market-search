@@ -156,6 +156,13 @@
 			);
 		}
 
+		if (document.getElementById('kanata').checked) {
+            window.open(
+                'https://kanatacg.crystalcommerce.com/products/search?query=' + searchTerm, 
+                'kanataWindow'
+            );
+        }
+
 		if (document.getElementById('ccac').checked) {
             window.open(
                 'https://atlascollectables-admin.crystalcommerce.com/inventory/update?utf8=%E2%9C%93&form_action=&page=1&per_page_number=200&in_category_tree_by_id=&search=' + searchTerm + '&commit=Go', 
@@ -260,6 +267,10 @@
 					<label class="option">
 						<input type="checkbox" id="fiftyc">
 						<span class="label-body">50cards</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="kanata">
+						<span class="label-body">wizard's tower / kanatacg</span>
 					</label>
 				</div>
 			</div>
