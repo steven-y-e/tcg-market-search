@@ -12,164 +12,288 @@
 	<!--link rel="icon" type="image/png" href="images/favicon.png"-->
 
 	<script type="text/javascript">
+	
 	function performSearch() {
+	
+		const tcgplayer = document.getElementById('tcgplayer');
+		const facetoface = document.getElementById('facetoface');
+		const fourohonegames = document.getElementById('fourohonegames');
+		const chimera = document.getElementById('chimera');
+		const jjs = document.getElementById('jjs');
+		const ebay = document.getElementById('ebay');
+		const scg = document.getElementById('scg');
+		const atlas = document.getElementById('atlas');
+		const pc = document.getElementById('pc');
+		const limitless = document.getElementById('limitless');
+		const scryfall = document.getElementById('scryfall');
+		const xj = document.getElementById('xj');
+		const psg = document.getElementById('psg');
+		const ieightoheight = document.getElementById('ieightoheight');
+		const fiftyc = document.getElementById('fiftyc');
+		const tcgr = document.getElementById('tcgr');
+		const darkfox = document.getElementById('darkfox');
+		const skyfox = document.getElementById('skyfox');
+		const kanzen = document.getElementById('kanzen');
+		const dollys = document.getElementById('dollys');
+		const kanata = document.getElementById('kanata');
+		const ccac = document.getElementById('ccac');
+		
 		var searchTerm = 
 			encodeURIComponent(document.getElementById('searchQuery').value);
+		
+		window.localStorage.setItem('tcgplayer', tcgplayer.checked);
+		window.localStorage.setItem('facetoface', facetoface.checked);
+		window.localStorage.setItem('fourohonegames', fourohonegames.checked);
+		window.localStorage.setItem('chimera', chimera.checked);
+		window.localStorage.setItem('jjs', jjs.checked);
+		window.localStorage.setItem('ebay', ebay.checked);
+		window.localStorage.setItem('scg', scg.checked);
+		window.localStorage.setItem('atlas', atlas.checked);
+		window.localStorage.setItem('pc', pc.checked);
+		window.localStorage.setItem('limitless', limitless.checked);
+		window.localStorage.setItem('scryfall', scryfall.checked);
+		window.localStorage.setItem('xj', xj.checked);
+		window.localStorage.setItem('psg', psg.checked);
+		window.localStorage.setItem('ieightoheight', ieightoheight.checked);
+		window.localStorage.setItem('fiftyc', fiftyc.checked);
+		window.localStorage.setItem('tcgr', tcgr.checked);
+		window.localStorage.setItem('darkfox', darkfox.checked);
+		window.localStorage.setItem('skyfox', skyfox.checked);
+		window.localStorage.setItem('kanzen', kanzen.checked);
+		window.localStorage.setItem('dollys', dollys.checked);
+		window.localStorage.setItem('kanata', kanata.checked);
+		window.localStorage.setItem('ccac', ccac.checked);
 
-		if (document.getElementById('tcgplayer').checked) {
+		if (tcgplayer.checked) {
 			window.open(
 				'https://www.tcgplayer.com/search/all/product?q=' + searchTerm + '&view=grid', 
 				'tcgpWindow'
 			);
 		}
 
-		if (document.getElementById('facetoface').checked) {
+		if (facetoface.checked) {
 			window.open(
 				'https://facetofacegames.com/search?q=' + searchTerm, 
 				'faceWindow'
 			);
 		}
 
-		if (document.getElementById('401games').checked) {
+		if (fourohonegames.checked) {
 			window.open(
 				'https://store.401games.ca/pages/search-results?q=' + searchTerm, 
 				'fourOhOneWindow'
 			);
 		}
 
-		if (document.getElementById('chimera').checked) {
+		if (chimera.checked) {
 			window.open(
 				'https://chimeragamingonline.com/search?type=product&options%5Bprefix%5D=last&q=' + searchTerm, 
 				'chimeraWindow'
 			);
 		}
 
-		if (document.getElementById('jj').checked) {
+		if (jjs.checked) {
 			window.open(
 				'https://jjcards.crystalcommerce.com/products/search?q=' + searchTerm, 
 				'jjWindow'
 			);
 		}
 
-		if (document.getElementById('ebay').checked) {
+		if (ebay.checked) {
 			window.open(
 				'https://www.ebay.ca/sch/i.html?_from=R40&_nkw=' + searchTerm + '&_sacat=0&rt=nc&LH_Sold=1&LH_Complete=1', 
 				'ebayWindow'
 			);
 		}
 
-		if (document.getElementById('scg').checked) {
+		if (scg.checked) {
 			window.open(
 				'https://starcitygames.com/search/?search_query=' + searchTerm + '&sort=score', 
 				'scgWindow'
 			);
 		}
 
-		if (document.getElementById('atlas').checked) {
+		if (atlas.checked) {
 			window.open(
 				'https://www.atlascollectables.com/products/search?q=' + searchTerm, 
 				'atlasWindow'
 			);
 		}
 
-		if (document.getElementById('pc').checked) {
+		if (pc.checked) {
 			window.open(
 				'https://www.pricecharting.com/search-products?q=' + searchTerm + '&type=prices', 
 				'pcWindow'
 			);
 		}
 
-		if (document.getElementById('limitless').checked) {
+		if (limitless.checked) {
 			window.open(
 				'https://limitlesstcg.com/cards?q=' + searchTerm, 
 				'limitlessWindow'
 			);
 		}
 
-		if (document.getElementById('scryfall').checked) {
+		if (scryfall.checked) {
 			window.open(
 				'https://scryfall.com/search?q=' + searchTerm, 
 				'scryfallWindow'
 			);
 		}
 
-		if (document.getElementById('xj').checked) {
+		if (xj.checked) {
 			window.open(
 				'https://www.expeditionjeux.com/products/search?q=' + searchTerm + '&c=1', 
 				'xjWindow'
 			);
 		}
 
-		if (document.getElementById('psg').checked) {
+		if (psg.checked) {
 			window.open(
 				'https://www.perfectspheregames.com/search?type=product&q=' + searchTerm, 
 				'psgWindow'
 			);
 		}
 
-		if (document.getElementById('i808').checked) {
+		if (ieightoheight.checked) {
 			window.open(
 				'https://www.ideal808.com/SearchResults?search=' + searchTerm, 
 				'i808Window'
 			);
 		}
 
-		if (document.getElementById('fiftyc').checked) {
+		if (fiftyc.checked) {
 			window.open(
 				'https://50cards.shop/pages/search-results-page?q=' + searchTerm, 
 				'fiftycWindow'
 			);
 		}
 
-		if (document.getElementById('tcgr').checked) {
+		if (tcgr.checked) {
 			window.open(
 				'https://tcgrepublic.com/product/text_search.html?q=' + searchTerm, 
 				'tcgrWindow'
 			);
 		}
 
-		if (document.getElementById('darkfox').checked) {
+		if (darkfox.checked) {
 			window.open(
 				'https://www.darkfoxtcg.com/search.php?search_query=' + searchTerm, 
 				'darkfoxWindow'
 			);
 		}
 
-		if (document.getElementById('skyfox').checked) {
+		if (skyfox.checked) {
 			window.open(
 				'https://skyfoxgames.com/search?type=product&options%5Bprefix%5D=last&q=' + searchTerm, 
 				'skyfoxWindow'
 			);
 		}
 
-		if (document.getElementById('kanzen').checked) {
+		if (kanzen.checked) {
 			window.open(
 				'https://kanzengames.com/search?q=' + searchTerm, 
 				'kanzenWindow'
 			);
 		}
 
-		if (document.getElementById('dollys').checked) {
+		if (dollys.checked) {
 			window.open(
 				'https://www.dollys.ca/products/search?q=' + searchTerm, 
 				'dollysWindow'
 			);
 		}
 
-		if (document.getElementById('kanata').checked) {
+		if (kanata.checked) {
             window.open(
                 'https://kanatacg.crystalcommerce.com/products/search?query=' + searchTerm, 
                 'kanataWindow'
             );
         }
 
-		if (document.getElementById('ccac').checked) {
+		if (ccac.checked) {
             window.open(
                 'https://atlascollectables-admin.crystalcommerce.com/inventory/update?utf8=%E2%9C%93&form_action=&page=1&per_page_number=200&in_category_tree_by_id=&search=' + searchTerm + '&commit=Go', 
                 'ccacWindow'
             );
         }
 	}
+	
+	window.addEventListener('load', () => {
+		if (window.localStorage.getItem('tcgplayer') === null) {
+			// initialize local storage
+			window.localStorage.setItem('tcgplayer', false);
+			window.localStorage.setItem('facetoface', false);
+			window.localStorage.setItem('fourohonegames', false);
+			window.localStorage.setItem('chimera', false);
+			window.localStorage.setItem('jjs', false);
+			window.localStorage.setItem('ebay', false);
+			window.localStorage.setItem('scg', false);
+			window.localStorage.setItem('atlas', false);
+			window.localStorage.setItem('pc', false);
+			window.localStorage.setItem('limitless', false);
+			window.localStorage.setItem('scryfall', false);
+			window.localStorage.setItem('xj', false);
+			window.localStorage.setItem('psg', false);
+			window.localStorage.setItem('ieightoheight', false);
+			window.localStorage.setItem('fiftyc', false);
+			window.localStorage.setItem('tcgr', false);
+			window.localStorage.setItem('darkfox', false);
+			window.localStorage.setItem('skyfox', false);
+			window.localStorage.setItem('kanzen', false);
+			window.localStorage.setItem('dollys', false);
+			window.localStorage.setItem('kanata', false);
+			window.localStorage.setItem('ccac', false);
+		}
+		
+		else {
+			const tcgplayer = document.getElementById('tcgplayer');
+			const facetoface = document.getElementById('facetoface');
+			const fourohonegames = document.getElementById('fourohonegames');
+			const chimera = document.getElementById('chimera');
+			const jjs = document.getElementById('jjs');
+			const ebay = document.getElementById('ebay');
+			const scg = document.getElementById('scg');
+			const atlas = document.getElementById('atlas');
+			const pc = document.getElementById('pc');
+			const limitless = document.getElementById('limitless');
+			const scryfall = document.getElementById('scryfall');
+			const xj = document.getElementById('xj');
+			const psg = document.getElementById('psg');
+			const ieightoheight = document.getElementById('ieightoheight');
+			const fiftyc = document.getElementById('fiftyc');
+			const tcgr = document.getElementById('tcgr');
+			const darkfox = document.getElementById('darkfox');
+			const skyfox = document.getElementById('skyfox');
+			const kanzen = document.getElementById('kanzen');
+			const dollys = document.getElementById('dollys');
+			const kanata = document.getElementById('kanata');
+			const ccac = document.getElementById('ccac');
+			
+			tcgplayer.checked = ('true' === window.localStorage.getItem('tcgplayer'));
+			facetoface.checked = ('true' === window.localStorage.getItem('facetoface'));
+			fourohonegames.checked = ('true' === window.localStorage.getItem('fourohonegames'));
+			chimera.checked = ('true' === window.localStorage.getItem('chimera'));
+			jjs.checked = ('true' === window.localStorage.getItem('jjs'));
+			ebay.checked = ('true' === window.localStorage.getItem('ebay'));
+			scg.checked = ('true' === window.localStorage.getItem('scg'));
+			atlas.checked = ('true' === window.localStorage.getItem('atlas'));
+			pc.checked = ('true' === window.localStorage.getItem('pc'));
+			limitless.checked = ('true' === window.localStorage.getItem('limitless'));
+			scryfall.checked = ('true' === window.localStorage.getItem('scryfall'));
+			xj.checked = ('true' === window.localStorage.getItem('xj'));
+			psg.checked = ('true' === window.localStorage.getItem('psg'));
+			ieightoheight.checked = ('true' === window.localStorage.getItem('ieightoheight'));
+			fiftyc.checked = ('true' === window.localStorage.getItem('fiftyc'));
+			tcgr.checked = ('true' === window.localStorage.getItem('tcgr'));
+			darkfox.checked = ('true' === window.localStorage.getItem('darkfox'));
+			skyfox.checked = ('true' === window.localStorage.getItem('skyfox'));
+			kanzen.checked = ('true' === window.localStorage.getItem('kanzen'));
+			dollys.checked = ('true' === window.localStorage.getItem('dollys'));
+			kanata.checked = ('true' === window.localStorage.getItem('kanata'));
+			ccac.checked = ('true' === window.localStorage.getItem('ccac'));
+		}
+	});
 	</script>
 </head>
 <body>
@@ -191,11 +315,11 @@
 						<span class="label-body">chimera</span>
 					</label>
 					<label class="option">
-						<input type="checkbox" id="jj">
+						<input type="checkbox" id="jjs">
 						<span class="label-body">j&j cards and collectables</span>
 					</label>
 					<label class="option">
-						<input type="checkbox" id="tcgplayer" checked>
+						<input type="checkbox" id="tcgplayer">
 						<span class="label-body">tcg player</span>
 					</label>
 					<label class="option">
@@ -229,11 +353,11 @@
 				</div>
 				<div class="six columns">
 					<label class="option">
-						<input type="checkbox" id="401games">
+						<input type="checkbox" id="fourohonegames">
 						<span class="label-body">401 games</span>
 					</label>
 					<label class="option">
-						<input type="checkbox" id="facetoface" checked>
+						<input type="checkbox" id="facetoface">
 						<span class="label-body">face to face</span>
 					</label>
 					<label class="option">
@@ -249,7 +373,7 @@
 						<span class="label-body">expedition jeux</span>
 					</label>
 					<label class="option">
-						<input type="checkbox" id="i808">
+						<input type="checkbox" id="ieightoheight">
 						<span class="label-body">ideal808</span>
 					</label>
 					<label class="option">
