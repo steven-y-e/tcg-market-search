@@ -37,6 +37,7 @@
 		const dollys = document.getElementById('dollys');
 		const kanata = document.getElementById('kanata');
 		const ccac = document.getElementById('ccac');
+		const snapcastermtg = document.getElementById('snapcastermtg');
 		
 		var searchTerm = 
 			encodeURIComponent(document.getElementById('searchQuery').value);
@@ -63,6 +64,7 @@
 		window.localStorage.setItem('dollys', dollys.checked);
 		window.localStorage.setItem('kanata', kanata.checked);
 		window.localStorage.setItem('ccac', ccac.checked);
+		window.localStorage.setItem('snapcastermtg', snapcastermtg.checked);
 
 		if (tcgplayer.checked) {
 			window.open(
@@ -217,10 +219,17 @@
                 'ccacWindow'
             );
         }
+
+		if (snapcastermtg.checked) {
+            window.open(
+                'https://www.snapcaster.ca/singles/magic-the-gathering?q=' + searchTerm + '&sortBy=price-asc', 
+                'snapcastermtgWindow'
+            );
+        }
 	}
 	
 	window.addEventListener('load', () => {
-		if (window.localStorage.getItem('tcgplayer') === null) {
+		if (window.localStorage.getItem('snapcastermtg') === null) {
 			// initialize local storage
 			window.localStorage.setItem('tcgplayer', false);
 			window.localStorage.setItem('facetoface', false);
@@ -244,6 +253,7 @@
 			window.localStorage.setItem('dollys', false);
 			window.localStorage.setItem('kanata', false);
 			window.localStorage.setItem('ccac', false);
+			window.localStorage.setItem('snapcastermtg', false);
 		}
 		
 		else {
@@ -269,6 +279,7 @@
 			const dollys = document.getElementById('dollys');
 			const kanata = document.getElementById('kanata');
 			const ccac = document.getElementById('ccac');
+			const snapcastermtg = document.getElementById('snapcastermtg');
 			
 			tcgplayer.checked = ('true' === window.localStorage.getItem('tcgplayer'));
 			facetoface.checked = ('true' === window.localStorage.getItem('facetoface'));
@@ -292,6 +303,7 @@
 			dollys.checked = ('true' === window.localStorage.getItem('dollys'));
 			kanata.checked = ('true' === window.localStorage.getItem('kanata'));
 			ccac.checked = ('true' === window.localStorage.getItem('ccac'));
+			snapcastermtg.checked = ('true' === window.localStorage.getItem('snapcastermtg'));
 		}
 	});
 	</script>
@@ -349,6 +361,10 @@
 					<label class="option">
 						<input type="checkbox" id="ccac">
 						<span class="label-body">crystal commerce (atlas)</span>
+					</label>
+					<label class="option">
+						<input type="checkbox" id="snapcastermtg">
+						<span class="label-body">snapcaster (mtg)</span>
 					</label>
 				</div>
 				<div class="six columns">
